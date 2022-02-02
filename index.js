@@ -2,13 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateAndPrintTotal(e) {
         e.preventDefault();
 
+        const startingValue = Number(document.getElementById('starting-amount').value);
         const depositAmount = Number(document.getElementById('deposit-amount').value);
         const interestRate = Number(document.getElementById('interest-rate').value);
         const timeFrame = Number(document.getElementById('time-frame').value);
         const timeFrameInDays = timeFrame * 7;
 
-        let total = 0;
-        let totalNoInterest = 0;
+        let total = startingValue;
+        let totalNoInterest = startingValue;
         for (let i = 0; i < timeFrameInDays; i++) {
             if (i % 7 == 0) {
                 total += depositAmount;
