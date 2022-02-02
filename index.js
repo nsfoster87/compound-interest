@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const startingValue = Number(document.getElementById('starting-amount').value);
         const depositAmount = Number(document.getElementById('deposit-amount').value);
-        const interestRate = Number(document.getElementById('interest-rate').value);
+        const interestRate = Number(document.getElementById('interest-rate').value) / 100;
         const timeFrame = Number(document.getElementById('time-frame').value);
         const timeFrameInDays = timeFrame * 7;
 
